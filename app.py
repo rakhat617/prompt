@@ -7,15 +7,15 @@ import google.generativeai as genai
 
 from dotenv import load_dotenv
 
-from json_to_txt import get_examples_text
+# from json_to_txt import get_examples_text
 
 load_dotenv()
 
 
-# with open("examples.txt", "r", encoding="utf-8") as f:
-#     examples_text = f.read()
+with open("examples.txt", "r", encoding="utf-8") as f:
+    examples_text = f.read()
 
-examples_text = get_examples_text()
+# examples_text = get_examples_text()
 
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -66,7 +66,7 @@ system_prompt = f"""
 Если обращение завершилось без ответа или автоматически закрыто системой — укажи `"Закрыта автоматически"`.
 
 Список возможных причин обращения:
-1. Уведомления
+1. Услуга подбора очков (проверка)
 2. Услуга подбора МКЛ (проверка)
 3. Услуга детская проверка зрения
 4. Услуга лечение глаз
@@ -82,7 +82,7 @@ system_prompt = f"""
 14. Узнать статус заказа
 15. Сотрудничество
 16. Найм
-17. Услуга подбора очков (проверка)
+17. Уведомления
 18. Отзывы и обратная связь
 19. Не ответил
 20. Закрыта автоматически
