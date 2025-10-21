@@ -1,5 +1,5 @@
 .env
 env/
 __pycache__/
-results.txt
-results_astana.txt
+results/
+rejections_examples.txt
